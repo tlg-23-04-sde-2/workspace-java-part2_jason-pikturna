@@ -1,6 +1,14 @@
 package com.entertainment;
 
-public class Television {
+import java.util.Objects;
+
+/*
+ * Natural order is defined by brand (String), then by volume (int)
+ * to be "consistent with equals()" we must use the same properties
+ * for natural order that we use for equals() and hashCode().
+ */
+
+public class Television implements Comparable<Television> {
 
     private String brand = "Samsung";
     private int volume;
@@ -8,11 +16,11 @@ public class Television {
     private Tuner tuner = new Tuner();  // HAS-A Tuner - instantiated internally, not exposed
 
     //constructors
-    public Television(){
+    public Television() {
 
     }
 
-    public Television (String brand, int volume){
+    public Television(String brand, int volume) {
         setBrand(brand);
         setVolume(volume);
     }
@@ -23,7 +31,7 @@ public class Television {
         return tuner.getChannel();  // delegate to contained Tuner object
     }
 
-    public void changeChannel (int channel) {
+    public void changeChannel(int channel) {
         tuner.setChannel(channel);  // delegate to contained Tuner object
     }
 
@@ -47,25 +55,45 @@ public class Television {
     }
 
     @Override
+    public int hashCode() {
+        // poorly-written has function, because it easily yields "has collisions"
+        // a "hash collision" is when different objects has to the same value (dumb luck!)
+        return Objects.hash(getBrand(), getVolume());
+    }
+
+    @Override
     public boolean equals(Object obj) {
         boolean result = false;
 
         // only procee if 'obj' is a reference to another television object
-        if(obj instanceof Television) {
+        if (obj instanceof Television) {
             // downcast obj to more specific type Television, so we can call Television methods
             Television other = (Television) obj;
 
             // business equality is defined as brand and volume being the same
 
-           result = this.getBrand().equals(other.getBrand()) &&
-                   this.getVolume() == other.getVolume();
+            result = Objects.equals(this.getBrand(), other.getBrand()) &&
+                    this.getVolume() == other.getVolume();
+        }
+        return result;
+    }
+
+
+
+    @Override
+
+    public int compareTo(Television other) {
+        int result = this.getBrand().compareTo(other.getBrand());
+
+        if(result == 0) {   //tied on brand, break the tie by volume
+            result = Integer.compare(this.getVolume(), other.getVolume());
         }
         return result;
     }
 
     @Override
     public String toString() {
-        return getClass().getSimpleName() + " brand = " + getBrand()  + ", volume = " + getVolume() +
+        return getClass().getSimpleName() + " brand = " + getBrand() + ", volume = " + getVolume() +
                 ", currentChannel = " + getCurrentChannel();
     }
 }
