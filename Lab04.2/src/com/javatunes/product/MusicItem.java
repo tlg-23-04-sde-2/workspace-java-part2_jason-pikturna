@@ -8,8 +8,7 @@
  */
 package com.javatunes.product;
 
-public class MusicItem
-extends Product {
+public class MusicItem extends Product {
   
   public MusicItem(String code) {
     super(code);
