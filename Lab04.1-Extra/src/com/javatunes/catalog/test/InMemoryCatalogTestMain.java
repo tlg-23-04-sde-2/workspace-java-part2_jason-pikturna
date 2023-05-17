@@ -14,7 +14,7 @@ import com.javatunes.catalog.MusicItem;
 
 import java.util.Collection;
 
-class InMemoryCatalogTest {
+class InMemoryCatalogTestMain {
 
     /*
      * One by one, complete each test method below, and then "activate" it by
