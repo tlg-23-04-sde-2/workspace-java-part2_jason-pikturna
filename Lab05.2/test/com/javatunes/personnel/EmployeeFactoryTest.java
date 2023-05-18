@@ -1,6 +1,8 @@
 package com.javatunes.personnel;
 
 import static org.junit.Assert.*;
+
+import java.sql.Date;
 import java.util.HashMap;
 import java.util.Map;
 import org.junit.Before;
@@ -51,24 +53,50 @@ public class EmployeeFactoryTest {
    *   assertEquals(SalariedEmployee.class, emp.getClass())
    */
   @Test
-  public void testCreateEmployeeSalaried() {
-    // TODO
+  public void createEmployee_shouldReturnSalariedEmployee_typeSE() {
+    Employee emp = EmployeeFactory.createEmployee(seMap);
+
+    // prove that 'emp' is exactly type Salaried Employee (and not Executive, for example)
+    assertEquals(SalariedEmployee.class, emp.getClass());
+
+    // prove that its properties have all been set from the map
+    assertEquals("Jackie", emp.getName());
+
+    verifyCommonProperties(emp);
+
+    // need to downcast reference 'emp' to more specific type SalariedEmployee
+    SalariedEmployee semp = (SalariedEmployee) emp;
+    assertEquals(50000.0, semp.getSalary(), .001);
+
   }
-  
+
+  private void verifyCommonProperties(Employee emp) {
+    assertEquals(Date.valueOf("1990-08-24"), emp.getHireDate());
+    assertEquals("1990-08-24", emp.getHireDate().toString());
+  }
+
   /**
    * TASK: verify that passing heMap into your factory returns a HourlyEmployee, with all properties set.
    */
   @Test
-  public void testCreateEmployeeHourly() {
-    // TODO
+  public void createEmployee_shouldReturnHourlyEmployee_typeHE() {
+    Employee emp = EmployeeFactory.createEmployee(heMap);
+
+    assertEquals(HourlyEmployee.class, emp.getClass());
+    verifyCommonProperties(emp);
+    HourlyEmployee hemp = (HourlyEmployee) emp;
+    assertEquals(50.0, hemp.getRate(), .001);
+    assertEquals(40.0, hemp.getHours(), .001);
   }
-  
+
   /**
    * TASK: verify that passing a map with an invalid "type" value results in IllegalArgumentException.
    * The only valid values for "type" are "HE" or "SE".
    */
-  @Test
-  public void testCreateEmployeeInvalidTypeThrowsIllegalArgumentException() {
-    // TODO
+  @Test(expected = IllegalArgumentException.class)
+  public void createEmployee_shouldThrowIllegalArgumentException_whenInvalidType() {
+    Map<String,String> map = Map.of("type", "INVALID-TYPE");
+
+    EmployeeFactory.createEmployee(map);  // should trigger the exception
   }
 }
