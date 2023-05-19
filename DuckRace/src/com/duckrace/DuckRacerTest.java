@@ -30,7 +30,6 @@ class DuckRacerTest {
         System.out.println(rewardsList);
 
 
-
     }
 
 }
