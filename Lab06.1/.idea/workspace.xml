@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f4f812c7-47a2-42a0-aa1b-bcd3a7303cd6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Demo_addAll-extends-E/Demo_addAll-extends-E.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Demo_sort-super-E/Demo_sort-super-E.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiniLab06.1/MiniLab06.1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/entertainment/DisplayType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/entertainment/InvalidChannelException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/entertainment/InvalidChannelException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/entertainment/Television.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/entertainment/Television.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/entertainment/TelevisionBrandChannelComparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/entertainment/TelevisionChannelComparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/entertainment/Tuner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/entertainment/catalog/Catalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/entertainment/catalog/Catalog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/entertainment/client/TelevisionClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/entertainment/client/TelevisionClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/entertainment/TelevisionBrandChannelComparatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/entertainment/TelevisionBrandChannelComparatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/entertainment/TelevisionChannelComparatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/entertainment/TelevisionChannelComparatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/entertainment/TelevisionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/entertainment/TelevisionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/com/entertainment/catalog/CatalogTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/entertainment/catalog/CatalogTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MiniLab06.1/src/demo/innerclass/ui/LoginApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MiniLab06.1/src/demo/innerclass/ui/LoginApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MiniLab06.1/src/demo/innerclass/ui/LoginAppListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scratch/src/com/crisp/RadishSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Scratch/src/com/crisp/RadishSortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/Lab04.1-Extra/com/javatunes/catalog/test/InMemoryCatalogTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/Scratch/com/crisp/RadishSortTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/Scratch/com/crisp/RadishSortTest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2Q9RunQha4q2MElgILhyKL36wbl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f4f812c7-47a2-42a0-aa1b-bcd3a7303cd6" name="Changes" comment="" />
+      <created>1684764035534</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684764035534</updated>
+    </task>
+    <servers />
+  </component>
+</project>
