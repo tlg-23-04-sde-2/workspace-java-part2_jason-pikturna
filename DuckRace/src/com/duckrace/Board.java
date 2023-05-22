@@ -38,7 +38,7 @@ import java.util.*;
  *   17       17    Dom        1    DEBIT_CARD
  */
 
-class Board {
+public class Board {
     private final Map<Integer, String> studentIdMap = loadStudentIdMap();
     private final Map<Integer, DuckRacer> racerMap = new TreeMap<>();
 
@@ -66,17 +66,25 @@ class Board {
     //TODO render ths data Pretty, for display to the end user
     // see Java Pt. 1, Session 5:  Formatted Output
     public void show() {
-        Collection<DuckRacer> racers = racerMap.values();
-        System.out.println("Duck Race Results");
-        System.out.println("=================");
-        System.out.println();
-        System.out.println("id     name     wins   rewards");
-        System.out.println("__     ____     ____   _______");
-        for(DuckRacer racer : racers){
-            System.out.printf("%s     %s     %s   %s\n", racer.getId(), racer.getName(), racer.getWins(), racer.getRewards());
+        // if racerMap is empty, print "currently no results to show"
+        // otherwise, show the data (as we are doing below)
+        if (racerMap.isEmpty()) {
+            System.out.println("There are currently no results to show.");
+            System.out.println();
+        }
+        else {
+            Collection<DuckRacer> racers = racerMap.values();
+
+            System.out.println("Duck Race Results");
+            System.out.println("=================");
+            System.out.println();
+            System.out.println("id     name     wins   rewards");
+            System.out.println("__     ____     ____   _______");
+            for(DuckRacer racer : racers){
+                System.out.printf("%s     %s     %s   %s\n", racer.getId(), racer.getName(), racer.getWins(), racer.getRewards());
+            }
         }
     }
-
     private Map<Integer, String> loadStudentIdMap() {
         Map<Integer, String> idMap = new HashMap<>();
 
