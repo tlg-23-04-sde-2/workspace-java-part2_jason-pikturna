@@ -8,9 +8,12 @@
  */
 package com.javatunes.personnel;
 
+import com.fastjava.annotation.Fast;
+
 /**
  * TODO: all methods in this class should run 25% faster.
  */
+@Fast(0.25)
 public class Employee {
   
   /**
@@ -18,6 +21,7 @@ public class Employee {
    * OSHA regulations require extra logging about the performance improvement,
    * as well as a description of why we're using this technology from FastJava.com.
    */
+  @Fast(value = 0.5, log = true, description = "Much speed, very fast... WOW")
   public void work() {
     System.out.println("Employee working hard");
   }
