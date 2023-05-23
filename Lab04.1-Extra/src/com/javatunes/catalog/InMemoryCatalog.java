@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 // OF COURSE THIS CLASS DOESN'T COMPILE
 // Your first job is to fulfill the contract that this class has signed.
@@ -69,6 +70,10 @@ public class InMemoryCatalog implements Catalog {
 
     @Override
     public Collection<MusicItem> findByCategory(MusicCategory category) {
+        return catalogData.stream()
+                .filter(item -> item.getMusicCategory().equals(category))
+                .collect(Collectors.toList());
+        /*
         // return value
         Collection<MusicItem> result = new ArrayList<>();
 
@@ -79,6 +84,7 @@ public class InMemoryCatalog implements Catalog {
         }
 
         return result;
+        */
     }
 
     @Override
