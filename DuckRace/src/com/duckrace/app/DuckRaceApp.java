@@ -3,6 +3,7 @@ package com.duckrace.app;
 import com.duckrace.Board;
 import com.duckrace.Reward;
 
+import java.io.Serializable;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -11,9 +12,9 @@ import java.util.Scanner;
  * Sets up the system classes, orchestrates the overall flow of the application
  * prompts user for inputs and "forwards" those inputs into the system (back end)
  */
-public class DuckRaceApp {
+public class DuckRaceApp  {
     private final Scanner scanner = new Scanner(System.in); // read inputs from console
-    private final Board board = new Board();
+    private final Board board = Board.getInstance();
 
     public void execute() {
         welcome();
