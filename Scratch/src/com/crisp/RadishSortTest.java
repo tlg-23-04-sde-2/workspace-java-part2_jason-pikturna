@@ -24,7 +24,6 @@ class RadishSortTest {
 
         System.out.println("Sort by tailLength, via anonymous Comparator");
         radishes.sort(new Comparator<Radish>() {
-
             @Override
             public int compare(Radish r1, Radish r2) {
                 return Double.compare(r1.getTailLength(), r2.getTailLength());
@@ -33,13 +32,10 @@ class RadishSortTest {
         dump(radishes);
         System.out.println();
 
-        System.out.println("Sort by leaves, via anonymous Comparator");
-        radishes.sort(new Comparator<Radish>() {
-            @Override
-            public int compare(Radish r1, Radish r2) {
-                return Integer.compare(r1.getLeaves(), r2.getLeaves());    // switch r1,r2 to get DESCENDING ORDER
-            }
-        });
+        System.out.println("Sort by leaves, via Lamba");
+        radishes.sort((r1, r2) -> Integer.compare(r1.getLeaves(), r2.getLeaves()));
+        dump(radishes);
+        System.out.println();
     }
 
     private static void dump(List<Radish> radishList) {
